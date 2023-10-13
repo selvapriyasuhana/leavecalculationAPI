@@ -9,55 +9,6 @@ router.get("/", (req, res) => {
   });
 });
 
-/*const {
-      username,
-      Name,
-      Leavetype,
-      StartDate,
-      EndDate,
-      Numberofdays,
-      Reason,
-      Command,
-      Status,
-    } = req.body;
-
-    console.log("Received request for username:", username);
-
-    // Check if the username exists in the StaffDetails collection
-    const staffExists = await Staffdetails.findOne({ username });
-
-    if (!staffExists) {
-      console.log("Username not found in staffdetails:", username);
-      return res
-        .status(404)
-        .json({ error: "Username not found in staffdetails" });
-    }
-
-    console.log("Before creating and saving the leave request");
-
-    /*try {
-    const {
-      username,
-      Name,
-      Leavetype,
-      StartDate,
-      EndDate,
-      Numberofdays,
-      Reason,
-      Command,
-      Status,
-    } = req.body;
-    console.log("Before checking if the username exists");
-    // Check if the username exists in the StaffDetails collection
-    const staffExists = await Staffdetails.findOne({ username });
-    console.log("After checking if the username exists");
-    if (!staffExists) {
-      console.log("Username not found in staffdetails");
-      return res
-        .status(404)
-        .json({ error: "Username not found in staffdetails" });
-    }
-    console.log("Before creating and saving the leave request");*/
 router.post("/register", async (req, res) => {
   try {
     const {
@@ -122,8 +73,6 @@ router.post("/register", async (req, res) => {
 
 const Leavecontroller = require("../Controller/Leavecontroller.js");
 router.route("/user/get_all").get(Leavecontroller.index);
-//router.route("/user/status/:Status").get(Controller.see);
-//router.route("/user/name/:Name").get(Controller.saw);
 router.route("/user/id/:user_id").get(Leavecontroller.view);
 router.route("/:user_id").put(Leavecontroller.update);
 router.route("/:user_id").patch(Leavecontroller.update);

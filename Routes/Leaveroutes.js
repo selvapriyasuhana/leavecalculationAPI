@@ -5,7 +5,7 @@ const Staffdetails = require("../Models/Staffmodel.js");
 router.get("/", (req, res) => {
   res.json({
     status: "API Works",
-    message: "Welcome to Staff leave API",
+    message: "Welcome to Staff leavecalculation API",
   });
 });
 

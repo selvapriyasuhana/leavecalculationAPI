@@ -51,8 +51,8 @@ router.post("/register", async (req, res) => {
     });
 
     await staff.save();
-    staffMember[Leavetype] -= Numberofdays;
-    await staffMember.save();
+   // staffMember[Leavetype] -= Numberofdays;
+    //await staffMember.save();
 
     return res.json({
       message: "New staff leaverequest",

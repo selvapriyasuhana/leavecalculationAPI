@@ -83,42 +83,7 @@ exports.update = async (req, res) => {
         });
       }
       console.log("Leavetype:", Leavetype);
-      // Determine which leave balance to update based on the leave type
-      /*if (Leavetype === "Casualleave") {
-        user.Casualleave -= Numberofdays;
-      } else if (Leavetype === "Medicalleave") {
-        user.Medicalleave -= Numberofdays;
-      } else {
-        return res.json({
-          status: "Error",
-          message: "Invalid leave type",
-        });
-      }*/
-
-      /*if (Leavetype === "Casualleave" || Leavetype === "Medicalleave") {
-        const leaveBalanceField = Leavetype.toLowerCase();
-        const remainingBalance = user[leaveBalanceField] - Numberofdays;
-
-        if (remainingBalance < 0) {
-          // Set the leave request to "rejected" if the balance goes negative
-          updatedLeave.Status = "rejected";
-          await updatedLeave.save();
-
-          return res.json({
-            status: "Error",
-            message: `Insufficient ${Leavetype} balance`,
-          });
-        }
-
-        user[leaveBalanceField] = remainingBalance;
-        await user.save();
-      } else {
-        return res.json({
-          status: "Error",
-          message: "Invalid leave type",
-        });
-      }*/
-
+      
       if (Leavetype === "Casualleave") {
         user.Casualleave -= Numberofdays;
 

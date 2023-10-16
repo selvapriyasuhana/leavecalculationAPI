@@ -31,7 +31,7 @@ app.listen(port, () => {
   console.log("Server running on port " + port);
 });
 
-app.get("/", (req, res) => res.send("Welcome to  staff Signin Page"));
+app.get("/", (req, res) => res.send("Welcome to Staff Leave Calculation Page"));
 
 app.use("/Staff", StaffRoutes);
 app.use("/Leave", LeaveRoutes);
